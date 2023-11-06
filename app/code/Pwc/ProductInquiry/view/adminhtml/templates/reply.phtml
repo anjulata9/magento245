@@ -1,0 +1,38 @@
+
+<div id="popup-modal" >
+      <form method="post" id="form-validate" enctype="multipart/form-data" autocomplete="off" data-mage-init='{"validation":{}}' data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>">
+                <input type="hidden" name="id" value="<?= $this->getRequest()->getParams()['id'] ?>" />
+            <input type="hidden" name="customer_name" value="<?= $this->getRequest()->getParams()['customer_name'] ?>" />
+            <input type="hidden" name="customer_email" value="<?= $this->getRequest()->getParams()['customer_email'] ?>" />
+            <input type="hidden" name="sku" value="<?= $this->getRequest()->getParams()['sku'] ?>" />
+                <textarea id="reason" name="reason"></textarea>
+                <input type="button" name="submit" class="admin-reply-submit" value="Submit" />
+      </form>
+</div>
+
+<script>
+    require(
+        [
+            'jquery',
+        ],
+        function($) {
+            $(document).on("click",".admin-reply-submit",function(){  
+
+                var form_data = jQuery("#form-validate").serialize();
+                
+                $.ajax({
+                    url: "<?php  echo $block->getBaseUrl() . 'admin/productinquiry/index/send';?>",
+                    type: 'POST',
+                    data: form_data,
+                    success: function(data) {
+
+                        console.log(data);
+                    },
+                    error: function(result) {
+                        console.log('no response !');
+                    }
+                });
+            });
+        }
+    );
+</script>

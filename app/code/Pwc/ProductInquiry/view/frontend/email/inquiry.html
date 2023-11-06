@@ -1,0 +1,16 @@
+<!--@subject {{trans "Customer has sentemail to admin" }} @-->
+{{template config_path="design/email/header_template"}}
+    <div>
+
+        <div>Hello sir,</div>
+        <div></div>
+        <div><strong>Subject:{{var subject}}</strong></div>
+        <div></div>
+        <div>I am {{var customer_name}}, email id is {{var customer_email}}</div>
+        <div>My query about the product {{var sku}} is: {{var message}}</div>
+
+
+    </div>
+
+
+{{template config_path="design/email/footer_template"}}

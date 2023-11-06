@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Pwc_ProductInquiry::view" title="Inquiries" module="Pwc_ProductInquiry" sortOrder="50" resource="Pwc_ProductInquiry::view"/>
+
+        <add id="Pwc_ProductInquiry::menu" title="Manage Grid" module="Pwc_ProductInquiry" sortOrder="20" parent="Pwc_ProductInquiry::view" action="productinquiry/index/index" resource="Pwc_ProductInquiry::menu"/>
+    </menu>
+</config>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="product_inquiry" resource="default" engine="innodb" comment="Product Inquiry Table">
+        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true"
+                comment="Enquiry ID"/>
+        <column xsi:type="int" name="product_id" unsigned="true" nullable="false"
+                identity="false" default="0" comment="Product ID"/>
+        <column xsi:type="varchar" name="sku" nullable="false" length="64" comment="SKU"/>
+        <column xsi:type="varchar" name="customer_name" nullable="false" length="100" comment="Customer Name"/>
+        <column xsi:type="varchar" name="customer_email" nullable="false" length="100" comment="Customer Email"/>
+        <column xsi:type="varchar" name="inquiry_subject" nullable="false" length="100" comment="Enquiry Subject"/>
+        <column xsi:type="text" name="inquiry_message"  nullable="true" comment="Enquiry Message" />
+        <column xsi:type="varchar" name="status" nullable="false" length="50" comment="Enquiry Status"/>
+        <column xsi:type="text" name="response"  nullable="true" comment="Enquiry Message Response" />
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Creation Time"/>
+        <column xsi:type="timestamp" name="updated_at" on_update="true" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Update Time"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+        <index referenceId="PRODUCT_INQUIRY_PRODUCT_ID" indexType="btree">
+            <column name="product_id"/>
+        </index>
+        <index referenceId="PRODUCT_INQUIRY_SKU" indexType="btree">
+            <column name="sku"/>
+        </index>
+        <index referenceId="PRODUCT_INQUIRY_CUSTOMER_EMAIL" indexType="btree">
+            <column name="customer_email"/>
+        </index>
+    </table>
+</schema>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:Magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="pwc_product_inquiry_template" label="Product inquiry email" file="inquiry.html" type="html" module="Pwc_ProductInquiry" area="frontend"/>
+    <template id="pwc_product_inquiry_reply_template" label="Product inquiry Reply email" file="reply.html" type="html" module="Pwc_ProductInquiry" area="adminhtml"/>
+</config>

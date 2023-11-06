@@ -1,0 +1,25 @@
+{
+    "product_inquiry": {
+        "column": {
+            "id": true,
+            "product_id": true,
+            "sku": true,
+            "customer_name": true,
+            "customer_email": true,
+            "inquiry_subject": true,
+            "inquiry_message": true,
+            "status": true,
+            "response": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "index": {
+            "PRODUCT_INQUIRY_PRODUCT_ID": true,
+            "PRODUCT_INQUIRY_SKU": true,
+            "PRODUCT_INQUIRY_CUSTOMER_EMAIL": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}
