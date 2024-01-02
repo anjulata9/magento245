@@ -1,0 +1,18 @@
+<form id="newentityexample-form" action="<?php echo $block->getFormAction() ?>"  method="post" enctype="multipart">
+    <!-- Your form fields go here -->
+    <input type="hidden" name="customer_id" value="<?= $block->getCurrentCustomerId() ?>"/>
+    <div>
+        <label>Other Contact Number<input type="text" name="additional_contact_no" /></label>
+    </div>
+    <div>
+        <label>Alternative email<input type="email" name="alternative_email" /></label>
+    </div>
+    <div>Marital Status:
+        <input type="radio" id="single" name="marital_status" value="Single">
+        <label for="single">Single</label>
+        <input type="radio" id="married" name="marital_status" value="Married">
+        <label for="married">Married</label>
+    </div>
+    <!-- Add more form fields as needed -->
+    <button type="submit">Submit</button>
+</form>

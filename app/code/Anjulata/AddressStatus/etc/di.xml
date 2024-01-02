@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Customer\Block\Address\Edit">
+        <plugin name="address_status" type="Anjulata\AddressStatus\Plugin\Customer\AddressEdit" sortOrder="2"/>
+    </type>
+    <type name="Magento\Checkout\Model\ShippingInformationManagement">
+        <plugin name="save_to_quote_table" type="Anjulata\AddressStatus\Plugin\Checkout\Model\ShippingInformationManagement" sortOrder="1" />
+    </type>
+    <type name="Magento\Customer\Api\AddressRepositoryInterface">
+        <plugin name="add_extension_attribute_to_address_response" type="Anjulata\AddressStatus\Plugin\AddressExtensionAttribute" />
+    </type>
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="clean" xsi:type="object">Anjulata\AddressStatus\Model\Ping</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

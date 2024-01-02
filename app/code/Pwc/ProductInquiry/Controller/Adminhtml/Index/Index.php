@@ -5,7 +5,7 @@ namespace Pwc\ProductInquiry\Controller\Adminhtml\Index;
 class Index extends \Magento\Backend\App\Action
  
 {
- 
+    //const ADMIN_RESOURCE = 'Pwc_ProductInquiry::inquiries_list';
     protected $resultPageFactory;
  
     public function __construct(

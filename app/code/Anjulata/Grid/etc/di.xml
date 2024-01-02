@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<type name="Anjulata\Grid\Ui\DataProvider\Category\ListingDataProvider">
+		<plugin name="anjulata_grid_attribute" type="Anjulata\Grid\Plugin\AddAttributesToUiDataProvider"/>
+	</type>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">encoding
+				<item name="anjulata_grid_category_listing_data_source" xsi:type="string">AnjulataGridCategoryCollection</item>
+			</argument>
+		</arguments>
+	</type>
+	<virtualType name="AnjulataGridCategoryCollection" type="Anjulata\Grid\Ui\DataProvider\Category\Listing\Collection">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">catalog_category_entity</argument>
+			<argument name="resourceModel" xsi:type="string">Anjulata\Grid\Model\ResourceModel\Category</argument>
+		</arguments>
+	</virtualType>
+</config>

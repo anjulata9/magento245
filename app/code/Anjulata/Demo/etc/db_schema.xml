@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="demo_table_new" resource="default" engine="innodb" comment="Demo table for test db schema" onCreate="migrateDataFromAnotherTable(demo_table)">
+		<column xsi:type="int" name="id" unsigned="false" nullable="false" identity="true" comment="entity id"/>
+		<column xsi:type="smallint" name="store_id" unsigned="true" nullable="false" identity="false" default="0" comment="Store ID"/>
+		<column xsi:type="smallint" name="attribute_id" unsigned="true" nullable="false" identity="false" default="0" comment="Attribute ID"/>
+		<column xsi:type="varchar" name="new_title" nullable="false" length="254" comment="Title" onCreate="migrateDataFrom(title)"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="id"/>
+		</constraint>
+		<index referenceId="DEMO_TABLE_NEW_NEW_TITLE" indexType="btree">
+			<column name="new_title"/>
+		</index>
+	</table>
+</schema>

@@ -1,0 +1,16 @@
+{
+    "demo_table_new": {
+        "column": {
+            "id": true,
+            "store_id": true,
+            "attribute_id": true,
+            "new_title": true
+        },
+        "index": {
+            "DEMO_TABLE_NEW_NEW_TITLE": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

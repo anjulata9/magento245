@@ -27,10 +27,7 @@ step 4: execut “php bin/magento setup:upgrade” command and then 	generated w
 Step 5:smtp configuration: installed mageplaza smtp extension 
 	For configuring email sending system go to Store->Configuration->MAGEPLAZA EXTENSION->SMTP
 ```
-
 ![](img/capture1.png)
-
-
 ```
 step 6: creat product inquiry form that appears on the product detail page.
 ```

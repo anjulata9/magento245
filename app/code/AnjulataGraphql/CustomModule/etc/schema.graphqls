@@ -1,0 +1,32 @@
+type Query {
+    customProductAttribute(id: Int!): CustomProductAttribute @resolver(class: "AnjulataGraphql\\CustomModule\\Model\\Resolver\\CustomProductAttribute")
+}
+
+type CustomProductAttribute {
+    attribute_id: Int
+    attribute_code: String
+    frontend_label: String
+}
+
+type Mutation {
+    createCustomer(input: CustomerInput!): CustomerOutput @resolver(class: "AnjulataGraphql\\CustomModule\\Model\\Resolver\\CreateCustomer")
+}
+
+input CustomerInput {
+    firstname: String!
+    lastname: String!
+    email: String!
+    password: String!
+}
+
+type CustomerOutput {
+    customer: Customer
+    error_message: String
+}
+
+type Customer {
+    id: Int!
+    firstname: String!
+    lastname: String!
+    email: String!
+}

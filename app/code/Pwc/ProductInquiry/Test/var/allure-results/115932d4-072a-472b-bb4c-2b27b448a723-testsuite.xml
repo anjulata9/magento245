@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alr:test-suite xmlns:alr="urn:model.allure.qatools.yandex.ru" start="1702028499179" stop="1702028499212" version="1.4.0">
+  <name>Pwc\ProductInquiry\Test\Unit\Controller\Index\SubmitTest</name>
+  <test-cases>
+    <test-case start="1702028499180" stop="1702028499212" status="broken">
+      <name>testExecute</name>
+      <failure>
+        <message>Call to a member function addError() on null</message>
+        <stack-trace>#0 /var/www/html/magento245/vendor/phpunit/phpunit/src/Framework/TestCase.php(904): PHPUnit\Framework\TestResult-&gt;run()
+#1 /var/www/html/magento245/vendor/phpunit/phpunit/src/Framework/TestSuite.php(675): PHPUnit\Framework\TestCase-&gt;run()
+#2 /var/www/html/magento245/vendor/phpunit/phpunit/src/Framework/TestSuite.php(675): PHPUnit\Framework\TestSuite-&gt;run()
+#3 /var/www/html/magento245/vendor/phpunit/phpunit/src/TextUI/TestRunner.php(653): PHPUnit\Framework\TestSuite-&gt;run()
+#4 /var/www/html/magento245/vendor/phpunit/phpunit/src/TextUI/Command.php(144): PHPUnit\TextUI\TestRunner-&gt;run()
+#5 /var/www/html/magento245/vendor/phpunit/phpunit/src/TextUI/Command.php(97): PHPUnit\TextUI\Command-&gt;run()
+#6 /var/www/html/magento245/vendor/phpunit/phpunit/phpunit(98): PHPUnit\TextUI\Command::main()
+#7 {main}</stack-trace>
+      </failure>
+    </test-case>
+  </test-cases>
+</alr:test-suite>

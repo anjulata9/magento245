@@ -1,9 +1,13 @@
 <?xml version="1.0"?>
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <body>
-        <referenceContainer name="content">
-            <block class="Pwc\ProductInquiry\Block\Inquiry" name="product.inquiry" template="Pwc_ProductInquiry::inquiry.phtml" after="-">
+    <body>        
+        <referenceBlock name="product.info.details">
+            <block class="Pwc\ProductInquiry\Block\Inquiry" name="inquiry.tab" template="Pwc_ProductInquiry::inquiry.phtml" group="detailed_info" >
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Inquiry</argument>
+                    <argument name="sort_order" xsi:type="string">40</argument>
+                </arguments>
             </block>
-        </referenceContainer>
+        </referenceBlock>
     </body>
 </page>

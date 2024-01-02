@@ -1,0 +1,19 @@
+<?php
+/**
+ * @var \Anjulata\Module\Block\Customer\Widget\AddressStaus $block
+ */
+?>
+<div class="field field-name-gstno">
+    <label class="label" for="<?= $block->escapeHtml('address_status') ?>">
+        <span><?= $block->escapeHtml(__('Address Status')) ?></span>
+    </label>
+    <div class="control">
+        <input type="text"
+            id="<?= $block->escapeHtml('address_status') ?>"
+            name="<?= $block->escapeHtml('address_status') ?>"
+            value="<?= $block->escapeHtml($block->getValue()) ?>"
+            title="<?= $block->escapeHtml(__('Address Status')) ?>"
+            class="input-text"
+        >
+    </div>
+</div>
